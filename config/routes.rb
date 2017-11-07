@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+    root :to  => "cocktails#index"
+
   # get 'cocktails/index'
 
   # get 'cocktails/show'
