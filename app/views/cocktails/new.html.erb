@@ -1,24 +1,28 @@
 <h1>Cocktails new</h1>
 <!-- <p>Find me in app/views/cocktails/new.html.erb</p> -->
 
-<div class="container text-center"><%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
-  <%#= f.input :category, collection: Pet::CATEGORIES %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+<div class="container text-center">
+
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%#= f.input :category, collection: Pet::CATEGORIES %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit "add a cocktail", class: "btn btn-primary" %>
 <% end %>
 </div>
 
 
-<%#= simple_form_for ([@cocktail, @dose]) do |f| %>
-  <%#= f.input :name %>
-  <%#= f.submit %>
-<%# end %>
 
 
-<%#= simple_form_for [@cocktail, @dose] do |f| %>
-    <%#= f.association :ingredient %>
-    <%#= f.input :description %>
+<!--
+<div class="container text-center">
+<%#= simple_form_for [@cocktail, @dose],
+url: cocktail_doses_path(:cocktail_id), :method => :post do |f| %>
+    <%#= f.association :ingredient%>
+    <%#= f.input :description, collection: ["2cl", "4cl", "6cl", "8cl", "10cl"] %>
     <%#= f.submit "add ingredient", class: "btn btn-primary" %>
   <%# end %>
+
+</div> -->
+

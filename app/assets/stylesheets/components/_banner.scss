@@ -1,0 +1,65 @@
+.banner {
+  &--case {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 65vh;
+   overflow: hidden;
+   position: relative;
+  }
+  &--image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("bar6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    height: 100%;
+    width: 100%;
+  }
+  &--text {
+    // border: 1px dashed red;
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+
+
+.banner--case h1{
+  font-size: 70px;
+   padding: 100px;
+   color: #fff;
+}
+
+
+.banner--case .btn{
+  background-color: #555555;
+  color: #ffffff;
+  font-size: 40px;
+  border-radius: 10px;
+
+}
+
+.content {
+  display: flex;
+  margin: 50px;
+}
+.content p {
+  text-align: center;
+  font-size: 24px;
+}
+
+.img {
+  -webkit-filter: sepia(60%); /* Safari 6.0 - 9.0 */
+  filter: sepia(20%);
+
+  margin: 50px;
+  opacity:0.9 ;
+   &:hover {
+    opacity: 1;
+    filter:grayscale(30%);
+  }
+}
